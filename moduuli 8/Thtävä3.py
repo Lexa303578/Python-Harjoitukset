@@ -2,9 +2,9 @@ import mysql.connector
 from geopy.distance import geodesic
 yhteys=mysql.connector.connect(
     host="localhost",
-    database ="lentokentat",
-    user = "käyttäjä",
-    password ="salasana"
+    database ="flight_game",
+    user = "root",
+    password ="Leosaa07"
 )
 icao1=input("Anna ensimmäisen lentokentän ICAO-koodi:")
 icao2=input("Anna toisen lentokentän ICAO-koodi:")
@@ -14,7 +14,7 @@ SELECT latitude_deg, longitude_deg
 FROM airport
 WHERE ident =%s
 """
-kursori =yhteys.corsor()
+kursori =yhteys.cursor()
 
 kursori.execute(sql,(icao1,))
 kentta1=kursori.fetchone()
@@ -27,7 +27,7 @@ if kentta1 and kentta2:
     koordinaatit2 =(kentta2[0],kentta2[1])
 
     etäisyys = geodesic(koordinaatit1, koordinaatit2).kilometers
-    print(f"Lentekenttie vlinen etäysyys on {etäisyys:.1f} kilometriä.")
+    print(f"Lentokenttie välinen etäysyys on {etäisyys:.1f} kilometriä.")
 else:
     print("Jompaakumpaa lentokentää ei löytynyt.")
     kursori.close()

@@ -1,9 +1,9 @@
 import mysql.connector
 yhteys = mysql.connector.connect(
     host="localhost",
-    database="lentokentät",
-    user="käyttäjä",
-    password ="salasana"
+    database="flight_game",
+    user="root",
+    password ="Leosaa07"
 )
 maakoodi = input("Anna maakoodi:")
 sql ="""

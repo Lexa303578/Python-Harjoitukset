@@ -2,13 +2,13 @@ import mysql.connector
 
 yhteys = mysql.connector.connect(
     host ="localhost",
-    database = "lentokentat",
-    user ="kayttaja",
-    password ="salasana"
+    database = "flight_game",
+    user ="root",
+    password ="Leosaa07"
     )
 icao = input("Anna lentoaseman icao-koodi:")
 
-sql ="SELECT name, municipilaty FROM airport WHERE ident = %s"
+sql ="SELECT name FROM airport WHERE ident = %s"
 
 kursori =yhteys.cursor()
 kursori.execute(sql, (icao,))
@@ -17,7 +17,7 @@ tulos = kursori.fetchone()
 
 if tulos:
     print("lentokenttä:", tulos[0])
-    print("sijaintikunta:", tulos[1])
+    print("sijaintikunta:", tulos[0])
 else:
     print("Lentokentää ei löytynyt.")
     kursori.close()
