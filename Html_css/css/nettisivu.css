@@ -1,0 +1,126 @@
+ 
+ body {
+  background-color: rgb(30, 8, 230);
+  background-image: url("taustakuva.jpg");
+  background-size: cover;
+  color: azure;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  color: azure;
+  gap: 12px;
+}
+h2 {
+  text-align: center;
+  color: azure;
+  margin-top: -20px;
+}  
+h3 {
+  color: azure;
+}
+.Kuva {
+  text-align: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+.kartta {
+  width: 350px;
+  max-width: 100%;  
+  height: auto;
+}
+
+p {
+  font-size: 14px;
+ color: azure;
+  text-align: center;
+}
+.valikko {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  background-color: transparent;
+}
+
+.valikko a {
+  color: azure;
+  text-decoration: none;
+}
+
+.valikko a:visited {
+  color: azure;
+}
+
+.valikko a:hover {
+  text-decoration: underline;
+}
+.tuotteet {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tuote {
+  text-align: center;
+  width: 300px;
+}
+
+.kuva {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;  
+}
+
+.tuote h2 {
+  margin: 10px 0 5px;  
+}
+.specsit {
+  list-style: none;
+  color: azure;      
+  padding: 0;
+  margin: 0;
+}
+
+.specsit li {
+  padding: 4px 0;
+  color: azure;
+}
+.contact-otsikko {
+  text-align: left;      
+  padding-right: 40px;    
+}
+.yhteystiedot {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-style: italic;     
+  line-height: 1.2;       
+  color: #f1eeee;         
+  text-align: left;
+  margin: 20px;
+}
+
+.yhteystiedot strong {
+  font-weight: bold;     
+}
+.sijainti {
+  display: flex;
+  align-items: flex-start;   
+  justify-content: space-between;
+  gap: 30px;
+  margin: 20px;
+}
+.sijainti-kuva {
+  width: 400px;
+  height: auto;
+  flex-shrink: 0;
+  margin-left: auto;
+  padding-right: 30px;
+}
